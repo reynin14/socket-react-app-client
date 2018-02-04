@@ -5,7 +5,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      endpoint: "http://{your machine's ip}:4001",
+      endpoint: "http://10.0.1.4:4001",
 
       ///
       color: 'white'
@@ -41,13 +41,8 @@ class App extends Component {
       <div style={{ textAlign: "center" }}>
         <button onClick={() => this.send() }>Change Color</button>
 
-
-        ///
-
-        // adding the two buttons, also, remove all of the comments in the JSX section.
         <button id="blue" onClick={() => this.setColor('blue')}>Blue</button>
         <button id="red" onClick={() => this.setColor('red')}>Red</button>
-        ///
 
       </div>
     )
