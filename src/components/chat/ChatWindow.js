@@ -4,7 +4,7 @@ import '../../App.css'
 class ChatWindow extends React.Component{
   render(){
     return(
-      <div className='chatwindow'>
+      <div className='chatWindow'>
         Hello World
       </div>
     )

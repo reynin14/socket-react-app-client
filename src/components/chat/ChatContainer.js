@@ -37,13 +37,16 @@ class ChatContainer extends Component {
 
     return (
       <div className='chatContainer'>
-        <button onClick={() => this.send() }>Change Color</button>
+        <div className='buttonContainer'>
+          <button onClick={() => this.send() }>Change Color</button>
 
-        <button id="blue" onClick={() => this.setColor('blue')}>Blue</button>
-        <button id="red" onClick={() => this.setColor('red')}>Red</button>
-        <button id="green" onClick={() => this.setColor('green')}>Green</button>
-        <button id="yellow" onClick={() => this.setColor('yellow')}>Yellow</button>
-        <button id="black" onClick={() => this.setColor('black')}>Black</button>
+          <button id="blue" onClick={() => this.setColor('blue')}>Blue</button>
+          <button id="red" onClick={() => this.setColor('red')}>Red</button>
+          <button id="green" onClick={() => this.setColor('green')}>Green</button>
+          <button id="yellow" onClick={() => this.setColor('yellow')}>Yellow</button>
+          <button id="black" onClick={() => this.setColor('black')}>Black</button>
+        </div>
+
         <ChatWindow />
       </div>
     )

@@ -1,4 +1,4 @@
-.chatwindow {
+.chatWindow {
   display: flex;
   justify-content: center;
   top: 50%;
@@ -6,4 +6,16 @@
   width: 400px;
   height: 700px;
   background-color: green;
+  margin: auto;
+}
+
+.chatContainer {
+  margin: auto;
+  background-color: blue;
+  width: 50%;
+}
+
+.buttonContainer {
+  margin: auto;
+  width: 50%;
 }
