@@ -42,8 +42,13 @@ class ChatContainer extends Component {
           <button id="yellow" onClick={() => this.setColor('yellow')}>Yellow</button>
           <button id="black" onClick={() => this.setColor('black')}>Black</button>
         </div>
+        <div className='chatConversation'>
+          
+        </div>
+        <div>
+          <ChatWindow />
+        </div>
 
-        <ChatWindow />
       </div>
     )
   }
