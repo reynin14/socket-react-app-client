@@ -19,3 +19,13 @@
   margin: auto;
   width: 50%;
 }
+
+.chatInput {
+  display: block;
+  width: 300px;
+  height: 100px;
+}
+
+.chatSubmit {
+  margin-bottom: auto;
+}

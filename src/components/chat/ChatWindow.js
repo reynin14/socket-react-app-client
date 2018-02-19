@@ -5,7 +5,12 @@ class ChatWindow extends React.Component{
   render(){
     return(
       <div className='chatWindow'>
-        Hello World
+        <div>
+          <textarea className='chatInput'></textarea>
+          <div className='chatSubmit'>
+            <button>Enter</button>
+          </div>
+        </div>
       </div>
     )
   }
