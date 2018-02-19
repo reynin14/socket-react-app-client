@@ -1,14 +1,13 @@
 import React, { Component } from "react";
-import socketIOClient from "socket.io-client";
 
-import Chat from './components/main/Chat'
+import ChatContainer from './components/chat/ChatContainer'
 
 class App extends Component {
   render() {
 
     return (
       <div>
-        <Chat />
+        <ChatContainer />
       </div>
     )
   }

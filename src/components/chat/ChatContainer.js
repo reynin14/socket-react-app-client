@@ -1,16 +1,14 @@
 import React, { Component } from "react";
 import socketIOClient from "socket.io-client";
 
-class Chat extends Component {
+import ChatWindow from './ChatWindow'
+
+class ChatContainer extends Component {
   constructor() {
     super();
     this.state = {
       endpoint: "http://10.0.1.4:4001",
-
-      ///
       color: 'white'
-      ///
-
     };
   }
 
@@ -38,7 +36,7 @@ class Chat extends Component {
     })
 
     return (
-      <div style={{ textAlign: "center" }}>
+      <div className='chatContainer'>
         <button onClick={() => this.send() }>Change Color</button>
 
         <button id="blue" onClick={() => this.setColor('blue')}>Blue</button>
@@ -46,9 +44,9 @@ class Chat extends Component {
         <button id="green" onClick={() => this.setColor('green')}>Green</button>
         <button id="yellow" onClick={() => this.setColor('yellow')}>Yellow</button>
         <button id="black" onClick={() => this.setColor('black')}>Black</button>
-
+        <ChatWindow />
       </div>
     )
   }
 }
-export default Chat;
+export default ChatContainer;
