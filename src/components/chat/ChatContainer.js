@@ -9,7 +9,8 @@ class ChatContainer extends Component {
     this.state = {
       endpoint: "http://10.0.1.4:4001",
       color: 'white',
-      chatbox: []
+      chatbox: [],
+      message: ''
     };
   }
 
@@ -24,10 +25,16 @@ class ChatContainer extends Component {
     this.setState({ color })
   }
 
+  handleChange = (event) => {
+    this.setState({
+      message: event.target.value
+    })
+  }
+
   handleUpdate = () => {
-    // this.setState({
-    //   chatbox:[...message]
-    // })
+    this.setState({
+      chatbox:[...this.state.message]
+    })
   }
 
   render() {
@@ -49,11 +56,12 @@ class ChatContainer extends Component {
           <button id="yellow" onClick={() => this.setColor('yellow')}>Yellow</button>
           <button id="black" onClick={() => this.setColor('black')}>Black</button>
         </div>
-        <div className='chatConversation'>
 
+        <div className='chatConversation'>
+          {this.state.chatbox}
         </div>
         <div>
-          <ChatWindow updateConvo={this.handleUpdate} chatbox={this.state.chatbox}/>
+          <ChatWindow handleUpdate={this.handleUpdate} handleChange={this.handleChange}/>
         </div>
 
       </div>
