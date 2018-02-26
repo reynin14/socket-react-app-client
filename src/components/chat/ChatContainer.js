@@ -8,7 +8,8 @@ class ChatContainer extends Component {
     super();
     this.state = {
       endpoint: "http://10.0.1.4:4001",
-      color: 'white'
+      color: 'white',
+      chatbox: []
     };
   }
 
@@ -21,6 +22,12 @@ class ChatContainer extends Component {
   // adding the function
   setColor = (color) => {
     this.setState({ color })
+  }
+
+  handleUpdate = (message) => {
+    this.setState({
+      chatbox:[...message]
+    })
   }
 
   render() {
@@ -43,10 +50,10 @@ class ChatContainer extends Component {
           <button id="black" onClick={() => this.setColor('black')}>Black</button>
         </div>
         <div className='chatConversation'>
-          
+
         </div>
         <div>
-          <ChatWindow />
+          <ChatWindow updateConvo={this.handleUpdate} chatbox={this.state.chatbox}/>
         </div>
 
       </div>
