@@ -24,10 +24,10 @@ class ChatContainer extends Component {
     this.setState({ color })
   }
 
-  handleUpdate = (message) => {
-    this.setState({
-      chatbox:[...message]
-    })
+  handleUpdate = () => {
+    // this.setState({
+    //   chatbox:[...message]
+    // })
   }
 
   render() {
