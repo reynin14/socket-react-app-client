@@ -22,6 +22,7 @@
 
 .chatConversation {
   display: flex;
+  flex-direction: column;
   height: 400px;
   width: 60%;
   background-color: white;
