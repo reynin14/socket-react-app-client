@@ -34,7 +34,7 @@ class ChatContainer extends Component {
 
   handleUpdate = () => {
     this.setState({
-      chatbox:[...this.state.chatbox, <ChatMessage />]
+      chatbox:[...this.state.chatbox, <ChatMessage message={this.state.message}/>]
     })
   }
 
