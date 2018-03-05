@@ -1,6 +1,10 @@
+import React from 'react'
+
 const ChatMessage = (props) => (
   <div>
-    This is a ChatMessage
+    <p>This is a ChatMessage</p>
   </div>
 )
+
+export default ChatMessage
   

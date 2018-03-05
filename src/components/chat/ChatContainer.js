@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import socketIOClient from "socket.io-client";
 
 import ChatWindow from './ChatWindow'
+import ChatMessage from './ChatMessage'
 
 class ChatContainer extends Component {
   constructor() {
@@ -33,7 +34,7 @@ class ChatContainer extends Component {
 
   handleUpdate = () => {
     this.setState({
-      chatbox:[...this.state.message]
+      chatbox:[...this.state.chatbox, <ChatMessage />]
     })
   }
 
